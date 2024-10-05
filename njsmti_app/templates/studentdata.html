@@ -176,21 +176,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-  {% if not request.session.email or not request.session.role or request.session.role != "Director" and request.session.role != "Faculty" %}
-    <script>
-        window.location.href = "{% url 'login' %}";
-    </script>
+{% if request.session.role == 'Director' %}
+{% include 'dmenu.html' %}
+{% else %}
+{% include 'fmenu.html' %}
 {% endif %}
-    <!-- <div class="container"> -->
-      <div>
-      <div class="div">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" style="margin-left: 8%; width: 150px; height: 150px;" alt="">
-    <div>
-        <h2>The Veraval Education Society Sanchalit</h2>
-        <h3>NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
-        <h4>At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujrat)</h4>
-    </div>
-    </div>
     <div class="h1">Student Data</div><br><br>
 <form action="" method="get">
   <div class="form-group">
