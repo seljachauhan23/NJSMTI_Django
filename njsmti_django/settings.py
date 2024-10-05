@@ -76,7 +76,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'njsmticampus@gmail.com'
-EMAIL_HOST_PASSWORD = 'tpdalruwrgrlqbmr'  # Replace with the actual password or use an environment variable for security
+EMAIL_HOST_PASSWORD = 'ucxopchiplpvahxk'  # Replace with the actual password or use an environment variable for security
 DEFAULT_FROM_EMAIL = 'njsmticampus@gmail.com'
 
 WSGI_APPLICATION = 'njsmti_django.wsgi.application'
