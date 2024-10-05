@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <title>About Programme</title>
+    {% include 'header.html' %}  <!-- Django template tag for including header -->
+
+    <style>
+        .image {
+            display: inline-block;
+            width: 20%;
+            vertical-align: top;
+        }
+        .dv {
+            display:inline-block;
+            width:50%;
+            margin-left:80px;
+        }
+        .hh3 {
+            color:#000080;
+            font-family:Algerian;
+            margin-left:200px;
+            padding:20px;
+        }
+
+        @media only screen and(max-width:600px) {
+            img {
+                vertical-align: middle;
+                border-style: none;
+                height: 600px;
+                width: 300px;
+                padding-top: 100px;
+            }
+        }
+    </style>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    {% comment %} <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> {% endcomment %}
+  </head>
+  
+  <body>
+    <div>
+      <div style="display:inline-block;">
+        <div class="dv">
+          <h3 class="hh3">About MBA Programme</h3>
+          <h4>Master of Business Administration(MBA)</h4>
+          <span style="color: #000080;font-size: 18px;font-family: serif;">
+            <b>(A Two Years Full Time Course of Gujarat Technological University & Approved by AICTE, NEW DELHI)</b>
+          </span>
+
+          <p style="color:#000080;font-family: serif;font-size: 16px;text-align: justify; text-justify: inter-word;">
+            MBA is a two year program designed to provide the knowledge and skills of decision making and leadership necessary to tackle the challenge of today's global business...
+          </p>
+
+          <p style="color: red; font-family: serif; text-align: justify; text-justify: inter-word;">
+            <b>Objective:</b>&nbsp;
+            <span style="color:#000080;font-family: serif;font-size: 16px;text-align: justify; text-justify: inter-word;">
+              The objective of the MBA program is to train students to become development managers in the formal and informal sectors consistent with the needs of society...
+            </span>
+          </p>
+
+          <p style="color: red; font-family: serif; text-align: justify; text-justify: inter-word;">
+            <b>Job Opportunities:</b>&nbsp;
+            <span style="color:#000080;font-family: serif;font-size: 16px;text-align: justify; text-justify: inter-word;">
+              There is still a shortage of talent in developed economies and demographic issues...
+            </span>
+          </p>
+
+          <p style="color: red; font-family: serif; text-align: justify; text-justify: inter-word;">
+            <b>Management Quota:</b>&nbsp;
+            <span style="color:#000080;font-family: serif;font-size: 16px;text-align: justify; text-justify: inter-word;">
+              Nil (Institute has surrendered management quota since its inception and all seats are filled on the basis of Merit.)
+            </span>
+          </p>
+
+          <p style="color: red; font-family: serif; text-align: justify; text-justify: inter-word;">
+            <b>Fees:</b>&nbsp;
+            <span style="color:#000080;font-family: serif;font-size: 16px;text-align: justify; text-justify: inter-word;">
+              Rs. 27,500 per Semester
+            </span>
+          </p>
+
+          <p style="color: red; font-family: serif; text-align: justify; text-justify: inter-word;">
+            <b>Class Timings:</b>&nbsp;
+            <span style="color:#000080;font-family: serif;font-size: 16px;text-align: justify; text-justify: inter-word;">
+              Between 8:00 am to 2:30 pm
+            </span>
+          </p>
+        </div>
+
+        <div class="image">
+          <img src="https://www.veravaleducationsociety.org/njsmti/img/about/aboutmba01.png" alt=""><br>
+          <img style="width:210%;height: 400px;"src="https://www.veravaleducationsociety.org/njsmti/img/about/mbafees1.jpg" alt=""><br>
+          <img style="width:210%;height: 400px;" src="https://www.veravaleducationsociety.org/njsmti/img/about/mbafeesnote.jpg" alt=""><br>
+  </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'js/popper.min.js' %}" integrity="sha384-UO2eT0CpHqdSJQ6jJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  
+  <script>
+    function Speech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.onvoiceschanged = function() {
+          var message = new SpeechSynthesisUtterance();
+          message.text = "About MBA Programme";
+
+          var voices = window.speechSynthesis.getVoices();
+          var maleVoice = voices.find(function(voice) {
+            return voice.name.includes('Female');
+          });
+
+          message.voice = maleVoice || voices[0];
+          message.volume = 1;
+          message.rate = 1;
+          message.pitch = 1;
+
+          window.speechSynthesis.speak(message);
+        };
+      } else {
+        console.log('Speech synthesis not supported');
+      }
+    }
+
+    Speech();
+  </script>
+  
+  {% include 'footer.html' %} <!-- Include footer template -->
+</html>

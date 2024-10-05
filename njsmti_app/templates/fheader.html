@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Feaculty Header</title>
+    {% load static %}
+    <link href="{% static 'css/dfsheader.css' %}" rel="stylesheet" type="text/css"> 
+    <style>
+   .p1 {
+    display: inline-block;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    border: 3px solid #234F1E;
+    border-radius: 10px;
+    background: linear-gradient(160deg, #8fe27c, #339922);
+    margin-left: 20%;
+    margin-right: 30px;
+    height: 50px;
+    width: 50%;
+}
+
+.p1:hover {
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: #0A6522;
+    border: 3px solid #234F1E;
+    border-radius: 10px 20px;
+    background: white;
+    margin-left: 20%;
+    margin-right: 30px;
+    height: 50px;
+    width: 50%;
+}
+
+.btn3 {
+    display: inline-block;
+    background: linear-gradient(160deg, #FA8072, #FF2400);
+    color: white;
+    height: 50px;
+    width: 10%;
+    border: 3px solid #7C0A02;
+    border-radius: 10px 20px;
+    font-weight: bold;
+}
+
+.btn3:hover {
+    background: white;
+    color: red;
+    height: 50px;
+    width: 10%;
+    border: 3px solid #7C0A02;
+    border-radius: 10px 20px;
+    font-weight: bold;
+}
+            </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+ {% if not request.session.email or not request.session.role or request.session.role != "Faculty" %}
+    <script>
+        window.location.href = "{% url 'login' %}";
+    </script>
+{% endif %}
+    
+    <div class="div">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" style="margin-left: 8%; width: 150px; height: 150px;" alt="">
+    <div>
+        <h2>The Veraval Education Society Sanchalit</h2>
+        <h3>NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
+        <h4>At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujrat)</h4>
+    </div>
+    </div>
+     <div class="h1">Faculty Desk</div><br><br></div>
+
+    <div style="display: inline-block; width: 100%;">
+    <p style="display: inline-block;" class="p1">{{ request.session.email }} is Logged In </p>
+    <a href="{% url 'flogout' %}"><button type="button" class="btn3">LogOut</button></a>
+</div>
+
+<div style="margin-left: 14%;margin-bottom: 10%;">
+    <a href="{% url 'diary' %}">
+        <div style="border: 4px solid #000080; border-radius: 20px; width: 350px; height: 350px; display: inline-block;">
+            <div class="round">
+                <center>
+                    <div class="minround">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3237/3237795.png" class="img2">
+                    </div>
+                </center>
+                <h3 style="text-align: center">Diary</h3>
+            </div>
+        </div>
+    </a>
+    &nbsp;&nbsp;
+    <a href="{% url 'diarydata' %}">
+        <div style="border: 4px solid #000080; border-radius: 20px; width: 350px; height: 350px; display: inline-block;">
+            <div class="round">
+                <center>
+                    <div class="minround">
+                        <img src="https://cdn-icons-png.flaticon.com/128/828/828370.png" class="img2">
+                    </div>
+                </center>
+                <h3 style="text-align: center">Show Diary</h3>
+            </div>
+        </div>
+    </a>
+    &nbsp;&nbsp;
+    <a href="{% url 'syllabus' %}">
+        <div style="border: 4px solid #000080; border-radius: 20px; width: 350px; height: 350px; display: inline-block;">
+            <div class="round">
+                <center>
+                    <div class="minround">
+                        <img src="https://img.icons8.com/?size=80&id=sDy8Db7BzmAn&format=png" class="img2">
+                    </div>
+                </center>
+                <h3 style="text-align: center">Syllabus</h3>
+            </div>
+        </div>
+    </a><br><br><br>
+
+    <a href="{% url 'studentdata' %}">
+        <div style="border: 4px solid #000080; border-radius: 20px; width: 350px; height: 350px; display: inline-block;">
+            <div class="round">
+                <center>
+                    <div class="minround">
+                        <img src="https://cdn-icons-png.flaticon.com/128/948/948256.png" class="img2">
+                    </div>
+                </center>
+                <h3 style="text-align: center">Student Data</h3>
+            </div>
+        </div>
+    </a>
+    &nbsp;&nbsp;
+    <a href="{% url 'material' %}">
+        <div style="border: 4px solid #000080; border-radius: 20px; width: 350px; height: 350px; display: inline-block;">
+            <div class="round">
+                <center>
+                    <div class="minround">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6598/6598491.png" class="img2">
+                    </div>
+                </center>
+                <h3 style="text-align: center">Upload Material</h3>
+            </div>
+        </div>
+    </a>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+function Speech() {
+    if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            // Create a new instance of the SpeechSynthesisUtterance object
+            var message = new SpeechSynthesisUtterance();
+
+            // Set the text to be spoken
+            message.text = "faculty desk";
+
+            // Set the voice to be used (optional)
+            var voices = window.speechSynthesis.getVoices();
+
+            // Find a female voice
+            var femaleVoice = voices.find(function(voice) {
+                return voice.name.includes('Female');
+            });
+
+            // Set the female voice (if found), otherwise use the first available voice
+            message.voice = femaleVoice || voices[0];
+
+            // Set other options (optional)
+            message.volume = 1; // Range from 0 to 1
+            message.rate = 1; // Range from 0.1 to 10
+            message.pitch = 1; // Range from 0 to 2
+
+            // Speak the text
+            window.speechSynthesis.speak(message);
+        };
+    } else {
+        console.log('Speech synthesis not supported');
+    }
+}
+
+// Call Speech function when the page loads
+Speech();
+</script>

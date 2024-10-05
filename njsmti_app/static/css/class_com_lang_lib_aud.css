@@ -1,0 +1,35 @@
+
+.hh1{
+    padding:50px;
+    font-family:Algerian;
+    color:white
+}
+
+.div1{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.hh3{
+    font-family:Castellar;
+    color:#000080
+}
+p{
+    color:blac
+    k;font-family: serif;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+
+
+@media  only screen and(min-width:768px){
+
+}
+@media  only screen and(min-width:992px){
+
+}
+@media  only screen and(min-width: 992px){
+
+}

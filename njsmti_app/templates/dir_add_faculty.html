@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Available faculty</title>
+    <style>
+        .div {
+     display: flex;
+    align-items: center;
+      }
+
+        .div img {
+        margin-right: 20px;
+        margin-left: 20%;
+        }
+
+
+        .img {
+        width: 100px;
+        height: 150px;
+        margin-left: 50px;
+        }
+      
+        .h1{
+        color: black;
+        text-shadow: 2px 2px 4px rgba(100, 10,10 , 1000);
+        text-align: center;
+        padding-top: 15px;
+        font-family: algerian;
+        }
+        h2{
+        padding-left: 20%;
+        color: blue;
+        font-family: Cambria; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        font-weight:bolder;
+        }
+       h3{
+        font-familt: Perpetua;
+        color: red;
+        font-size:20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        }
+        h4{
+        padding-left: 20%;
+        color: blue;
+        font-family: Cambria; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        font-weight:bolder;
+        }
+       p{
+        text-align: center;
+        padding-bottom: 3%;
+        font-size: 30px;
+        font-family:algerian;
+        color:#000080;
+       
+        margin-right:100px;
+        
+        
+        }
+
+        form{
+        margin-left:10%;
+        }
+        .input{
+                border-radius: 20px; 
+                width: 40%; 
+                height: 40px;
+                margin-left:25%;
+        }
+        .dvv {
+    background: linear-gradient(to left, #89CFF0, #0096FF);
+    height: 1250px;
+    width: 85%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.dvv1 {
+    background: white;
+    height: 1150px;
+    width: 75%;
+    padding-right: 10px;
+    border-radius: 20px;
+    border: 3px solid #000080;
+
+}
+.btn1 {
+    margin-left: 30%;
+    border-radius: 20px;
+    width: 260px;
+    height: 60px;
+    background: #000080;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid yellow;
+}
+
+.btn1:hover {
+    margin-left: 30%;
+    border-radius: 20px;
+    width: 260px;
+    height: 60px;
+    background: white;
+    color: #000080;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid #000080;
+}
+span{
+        font-weight: bold;
+}
+
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    {% if not request.session.email or not request.session.role or request.session.role != "Director" %}
+    <script>
+        window.location.href = "{% url 'login' %}";
+    </script>
+{% endif %}
+    <div>
+    <div class="div">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" style="margin-left: 8%; width: 150px; height: 150px;" alt="">
+    <div>
+        <h2>The Veraval Education Society Sanchalit</h2>
+        <h3>NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
+        <h4>At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujrat)</h4>
+    </div>
+    </div>
+     <div class="h1">Add New Faculty</div>
+<center>
+{% if SM %}
+<h3>{{SM}}</h3>
+{% endif %}
+{% if error %}
+<h3>{{error}}</h3>
+{% endif %}
+</center>
+    <div class="dvv">
+        <div class="dvv1">
+        <center>
+            <img style="height:100px;width:100px;"src="data:image/png;base64,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" alt="">
+        </center>
+        
+        
+        <form action="" method="post">
+    {% csrf_token %}
+
+    <p style="padding-top:10px;">Personal Details</p>
+    
+    <input type="text" class="input" name="name" placeholder="Enter Faculty Name" value="{{ request.POST.name }}">
+    <br><br>
+
+    <input type="textarea" class="input" name="adr" placeholder="Enter Faculty Full Permanent Address" value="{{ request.POST.adr }}">
+    <br><br>
+
+    <input type="number" class="input" name="sph" placeholder="Enter Faculty Mobile Number In 10 Digits" value="{{ request.POST.sph }}"> 
+    <br><br>
+
+    <input type="email" class="input" name="email" placeholder="Enter Faculty E-mail" value="{{ request.POST.email }}">
+    <br><br>
+
+    <input type="date" name="dob" class="input" placeholder="Enter Faculty Date Of Birth" value="{{ request.POST.dob }}">
+    <br><br>
+
+    <input type="text" class="input" name="bp" placeholder="Enter Faculty Birth Place" value="{{ request.POST.bp }}">
+    <br><br>
+
+    <select name="category" class="input" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="sc" {% if request.POST.category == "sc" %}selected{% endif %}>SC</option>
+        <option value="st" {% if request.POST.category == "st" %}selected{% endif %}>ST</option>
+        <option value="sebc" {% if request.POST.category == "sebc" %}selected{% endif %}>SEBC</option>
+        <option value="open" {% if request.POST.category == "open" %}selected{% endif %}>OPEN</option>
+        <option value="openebc" {% if request.POST.category == "openebc" %}selected{% endif %}>OPEN-EBC</option>
+    </select>
+    <br><br>
+
+    <label style="margin-left:25%; font-size: 20px; font-weight: bold;">Gender :</label>
+    <input type="radio" name="gender" value="Male" {% if request.POST.gender == "Male" %}checked{% endif %}>
+    <label style="font-size: 20px; font-weight: bold;">Male</label>
+    <input type="radio" name="gender" value="Female" {% if request.POST.gender == "Female" %}checked{% endif %}>
+    <label style="font-size: 20px; font-weight: bold;">Female</label>
+    <input type="radio" name="gender" value="Other" {% if request.POST.gender == "Other" %}checked{% endif %}>
+    <label style="font-size: 20px; font-weight: bold;">Other</label>
+    <br><br>
+
+    <input type="text" name="nationality" class="input" placeholder="Enter Faculty Nationality" value="{{ request.POST.nationality }}">
+    <br><br>
+
+    <p>Education Details</p>
+
+    <input type="text" name="course" class="input" placeholder="Enter Faculty Education Qualification" value="{{ request.POST.course }}">
+    <br><br>
+
+    <input type="text" class="input" name="apply" placeholder="Enter Faculty Field To Apply" value="{{ request.POST.apply }}">
+    <br><br>
+
+    <input type="password" class="input" name="pwd" placeholder="Enter Faculty's Password">
+    <br><br>
+
+    <input class="btn1" type="submit" name="submit" value="Add">
+</form>
+</div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  <script>
+function Speech() {
+    if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            // Create a new instance of the SpeechSynthesisUtterance object
+            var message = new SpeechSynthesisUtterance();
+
+            // Set the text to be spoken
+            message.text = "add faculty by director";
+
+            // Set the voice to be used (optional)
+            var voices = window.speechSynthesis.getVoices();
+
+            // Find a male voice
+            var maleVoice = voices.find(function(voice) {
+                return voice.name.includes('Female');
+            });
+
+            // Set the male voice (if found), otherwise use the first available voice
+            message.voice = maleVoice || voices[0];
+
+            // Set other options (optional)
+            message.volume = 1; // Range from 0 to 1
+            message.rate = 1; // Range from 0.1 to 10
+            message.pitch = 1; // Range from 0 to 2
+
+            // Speak the text
+            window.speechSynthesis.speak(message);
+        };
+    } else {
+        console.log('Speech synthesis not supported');
+    }
+}
+
+// Call Speech function when the page loads
+Speech();
+</script>
+</html>

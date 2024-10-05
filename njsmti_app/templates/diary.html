@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Diary</title>
+    {% include "fmenu.html" %}
+   
+    <style>
+        .dv{
+            background:linear-gradient(to left, #89CFF0, #0096FF);
+            margin-left:300px;
+            margin-right:300px;
+            width:63%;
+            height:700px;
+            border-radius:20px;
+        }
+        .im{
+            height:80px;
+            width:90px;
+        }
+        .h3{
+            color:#000080;
+            font-family:Algerian;
+            padding:100px;
+        }
+        .input{
+            border-radius: 20px; 
+            width: 260px; 
+            height: 40px;
+        }
+        .btn1{
+            
+            border-radius: 20px; 
+            width: 260px; 
+            height: 60px;
+            background:#000080;
+            color:yellow;
+            font-weight:bold;
+            border:3px solid white;
+        }
+        .btn1:hover{
+            border-radius: 20px; 
+            width: 260px; 
+            height: 60px;
+            background:linear-gradient(to left,white , #89CFF0);
+            color:#000080;
+            font-weight:bold;
+            border:3px solid #000080;
+        }
+        .minput{
+            height: 170px; 
+            width: 300px; 
+            border-radius: 20px;
+        }
+        .dv1{
+            margin-left: 100px;
+        }
+        .dv2{
+            margin-left: 40px;
+        }
+        .div {
+     display: flex;
+    align-items: center;
+      }
+
+        .div img {
+        margin-right: 20px;
+        margin-left: 20%;
+        }
+
+
+        .img {
+        width: 100px;
+        height: 150px;
+        margin-left: 50px;
+        }
+      
+        .h1{
+        color: black;
+        text-shadow: 2px 2px 4px rgba(100, 10,10 , 1000);
+        text-align: center;
+        padding-top: 15px;
+        font-family: algerian;
+        }
+        h2{
+        padding-left: 20%;
+        color: blue;
+        font-family: Cambria; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        font-weight:bolder;
+        }
+       h3{
+        font-familt: Perpetua;
+        color: red;
+        font-size:20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        }
+        h4{
+        padding-left: 20%;
+        color: blue;
+        font-family: Cambria; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        font-weight:bolder;
+        }
+        </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+     <div class="h1">Daily Diary</div><br><br>
+    {% if SM %}
+    <h3>{{ SM }}</h3>
+{% endif %}
+        <div class="dv">
+        <center>
+                    <img style="" class="im"src="data:image/jpeg;base64,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" alt="">
+                </center>
+           
+            <center><h3 style="" class="h3">My Daily Diary</h3></center>
+            
+                <div class="dv1">
+    <form method="post">
+        {% csrf_token %}
+        <div style="display: flex; align-items: flex-start;">
+            <div class="dv2">
+                <input type="text" placeholder="Your Name" value="{{name}}" name="name" class="input" required readonly>
+                <span class="text-danger">
+                </span>
+                <br><br>
+                
+                <input type="email" placeholder="Your Email" name="email" value="{{email}}" class="input" required readonly>
+                <span class="text-danger">
+                </span>
+                <br><br>
+                
+                <input type="date" placeholder="Date" name="date" class="input" required>
+                <span class="text-danger">
+                </span>
+                <br><br>
+                
+                <input type="submit" name="send" value="Send Message" class="btn1">
+            </div>
+
+            <div style="margin-left: 60px;">
+                <input type="text" placeholder="Enter Your Work" name="msg" class="minput" required>
+                <span class="text-danger">
+                </span>
+            </div>
+        </div>
+    </form>  
+</div>
+            
+            
+
+        </div><br>
+    </div><br>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  <script>
+function Speech() {
+    if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            // Create a new instance of the SpeechSynthesisUtterance object
+            var message = new SpeechSynthesisUtterance();
+
+            // Set the text to be spoken
+            message.text = "Create your Diary";
+
+            // Set the voice to be used (optional)
+            var voices = window.speechSynthesis.getVoices();
+
+            // Find a male voice
+            var maleVoice = voices.find(function(voice) {
+                return voice.name.includes('Female');
+            });
+
+            // Set the male voice (if found), otherwise use the first available voice
+            message.voice = maleVoice || voices[0];
+
+            // Set other options (optional)
+            message.volume = 1; // Range from 0 to 1
+            message.rate = 1; // Range from 0.1 to 10
+            message.pitch = 1; // Range from 0 to 2
+
+            // Speak the text
+            window.speechSynthesis.speak(message);
+        };
+    } else {
+        console.log('Speech synthesis not supported');
+    }
+}
+
+// Call Speech function when the page loads
+Speech();
+</script>
+</html>
+

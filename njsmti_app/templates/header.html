@@ -1,0 +1,216 @@
+<html>
+    <head>
+        <style>
+            .img_banner {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+
+            .div {
+                display: flex;
+                align-items: center;
+            }
+
+            .img {
+                width: 100px;
+                margin-left: 50px;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-family: Perpetua;
+                margin-left: 30px;
+                background: linear-gradient(to left, white, #89CFF0);
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            li a {
+                color: #000080;
+                font-weight: 800;
+                font-size: 18px;
+                font-family: Perpetua;
+            }
+
+            li a:hover {
+                color: #FFA700;
+                font-weight: 800;
+                font-size: 18px;
+                font-family: Perpetua;
+                text-decoration: none;
+            }
+
+            li a:active {
+                color: green;
+            }
+
+            select {
+                border: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                padding: 5px 30px 5px 10px;
+                cursor: pointer;
+                background: linear-gradient(to left, white, #89CFF0);
+            }
+
+            .s {
+                color: #000080;
+                font-weight: bold;
+                font-size: 18px;
+                font-family: Perpetua;
+            }
+
+            .s:hover {
+                color: #FFA700;
+            }
+
+            option {
+                background: #000080;
+                font-weight: 500;
+                font-size: 18px;
+                font-family: Bell MT;
+                color: white;
+            }
+
+            .login {
+                height: 50px;
+                width: 100px;
+                background: green;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                font-family: serif;
+                border: 3px solid white;
+                border-radius: 10px 20px;
+            }
+
+            .login:hover {
+                background: white;
+                color: green;
+                border: 3px solid green;
+                border-radius: 10px 20px;
+            }
+
+            .div {
+                display: flex;
+                align-items: center;
+            }
+
+            .div img {
+                margin-right: 20px;
+                margin-left: 20%;
+            }
+
+            .img {
+                width: 100px;
+                height: 150px;
+                margin-left: 50%;
+            }
+
+            .h1 {
+                color: black;
+                text-shadow: 2px 2px 4px rgba(100, 10, 10, 1000);
+                text-align: center;
+                padding-top: 15px;
+                font-family: algerian;
+            }
+
+            .h22 {
+                padding-left: 10%;
+                color: blue;
+                font-family: Cambria;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                font-weight: bolder;
+            }
+
+            .h33 {
+                font-family: Perpetua;
+                color: red;
+                font-size: 25px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                font-weight: bold;
+            }
+
+            .dvg {
+                background: linear-gradient(to left, white, #89CFF0);
+                height: 80px;
+                padding-top: 10px;
+            }
+
+            #logo {
+                margin-left: 8%;
+                width: 150px;
+                height: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <center>
+                <div class="div">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" id="logo" alt="">
+                    <div>
+                        <h2 class="h22">The Veraval Education Society Sanchalit</h2>
+                        <h3 class="h33">NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
+                        <h4 class="hh4">At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujarat)</h4>
+                    </div>
+                </div>
+                <div class="dvg">
+                    <nav>
+                        <ul>
+                            <li><a href="{% url 'dashboard' %}">NJSMTI</a></li>
+                            <li><a href="{% url 'about' %}">ABOUT US</a></li>
+                            <li>
+                                <select class="s" onchange="window.location.href = this.value;">
+                                    <option value="">INFRASTRUCTURE</option>
+                                    <option value="{% url 'classroom' %}">CLASSROOM</option>
+                                    <option value="{% url 'computerlab' %}">COMPUTER LAB</option>
+                                    <option value="{% url 'languagelab' %}">LANGUAGE LAB</option>
+                                    <option value="{% url 'library' %}">LIBRARY</option>
+                                    <option value="{% url 'auditoriumhall' %}">AUDITORIUM HALL</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select class="s" onchange="window.location.href = this.value;">
+                                    <option value="">MBA PORTAL</option>
+                                    <option value="{% url 'aboutprogramme' %}">ABOUT PROGRAM</option>
+                                    <option value="{% url 'dm' %}">DIRECTOR MESSAGE</option>
+                                    <option value="{% url 'hod' %}">HOD'S MESSAGE</option>
+                                    <option value="{% url 'academic' %}">ACADEMIC</option>
+                                    <option value="{% url 'faculty' %}">FACULTY</option>
+                                    <option value="{% url 'alumni' %}">TOPPERS</option>
+                                    <option value="{% url 'expert' %}">EXPERT</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select class="s" onchange="window.location.href = this.value;">
+                                    <option value="">MCA PORTAL</option>
+                                    <option value="{% url 'aboutprogramme1' %}">ABOUT PROGRAM</option>
+                                    <option value="{% url 'hod1' %}">HOD'S MESSAGE</option>
+                                    <option value="{% url 'academic1' %}">ACADEMIC</option>
+                                    <option value="{% url 'faculty1' %}">FACULTY</option>
+                                    <option value="{% url 'alumni1' %}">TOPPERS</option>
+                                    <option value="{% url 'expert1' %}">EXPERT</option>
+                                </select>
+                            </li>
+                            <li><a href="{% url 'studentcorner' %}">STUDENTS CORNER</a></li>
+                            <li><a href="{% url 'galaxy' %}">GALAXY</a></li>
+                            <li><a href="{% url 'event' %}">EVENTS</a></li>
+                            <li><a href="{% url 'press' %}">PRESS</a></li>
+                            <li><a href="{% url 'contactus' %}">CONTACT US</a></li>
+                            <li><a href="{% url 'login' %}"><button name="login" class="login">LOGIN</button></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </center>
+        </div>
+    </body>
+</html>

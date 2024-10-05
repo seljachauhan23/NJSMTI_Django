@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Contact Us</title>
+    {% include 'header.html' %}
+    {% load static %}
+    <style>
+        .dv{
+            background:url('{% static 'ab.jpeg' %}');
+            height:200px;
+            width:100%;
+        }
+        .dvi{
+            display:inline-block;
+        }
+        .dv1{
+            display:inline-block;
+            width:40%;
+            margin-left:100px;
+        }
+        .dvv {
+            background: linear-gradient(to left, #89CFF0, #0096FF);
+            height: 600px;
+            width: 1000px;
+            margin-left: 230px;
+            margin-right: 100px;
+            display: flex; /* Added */
+            justify-content: center; /* Added */
+            align-items: center; /* Added */
+        }
+        .dvv1 {
+            background: white;
+            height: 500px;
+            width: 800px;
+            padding: 30px 0px 30px 0px;
+            border-radius:20px;
+            border:3px solid #000080;
+        }
+        .h1{
+            padding:50px;
+            font-family:Algerian;
+            color:white
+        }
+        .im{
+            height:50px;
+            width:15%;
+        }
+        .im1{
+            height:100px;
+            width:90px;
+        }
+        .dv3{
+            margin-left: 60px;
+        }
+
+        .faq {
+    margin-bottom: 20px;
+    /* border-bottom: 1px solid #ccc; */
+    margin-left: 230px;
+   
+  }
+  .faq summary {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .faq p {
+    margin-top: 5px;
+  }
+        </style>
+        <script>
+  function collapseOthers(details) {
+    details.parentElement.parentElement.querySelectorAll('details').forEach(detail => {
+      if (detail !== details) {
+        detail.removeAttribute('open');
+      }
+    });
+  }
+</script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div>
+         <div class="dv">
+                <center> <h1 style="" class="h1">Contact us</h1></center>
+        </div><br>
+        <div class="dvi">
+            <div class="dv1">
+                <h1 style="color:#000080;font-family:algerian;">Contact Info</h1>
+                <h3 style="color:gray;font-size:18px;"><b>N.J.Sonecha Mgmt. & Tech. Institute</b></h3>
+                <img style="" class="im"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLJorp78M2UE2QUNuQhfCMFT51OI4dzEi9exrioVb6_Hvq7C1Xte1I9g&s=0" alt="">
+                        <span style="font-size:25px;font-family:cursive;color:#00008B;"><b>Call Us</b></span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">+91-9913664603</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">+91-9624584775</small><br>
+                        <img style=" " class="im"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKOO2vIfMtNbgNO7QrRT4iYUxwYd4qq_87tcofFl2fSttAZRTdLxOtNQ&s=0" alt="">
+                        <span style="font-size:25px;font-family:cursive;color:#00008B;"><b>Email Us</b></span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">directornjsmti11@gmail.com</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">dwivediji80@yahoo.co.in</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">njsonecha@rediffmail.com</small><br>
+
+                        <img style=" " class="im"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjdcwDuN4BbdpnrHMTvL243qZBgmuhZ20C342HfenI9UkVlm0p1maTfg&s=0" alt="">
+                        <span style="font-size:25px;font-family:cursive;color:#00008B;"><b>Location</b></span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">N.J.Sonecha Mgmt. & Tech. Institute</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">Veraval - Junagadh Highway</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">Opp. Realiance Petrol Pump</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">At: Chanduvav Tal : Veraval</small><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small style="color:gray;font-size:15px;">District: Gir-Somnath (Gujarat)</small><br>
+            </div>
+            <div style="display:inline-block;width:20%;vertical-align:top;margin-left:50px;">
+            
+                <iframe width="600%" height="500px;" id="gmap_canvas" src="https://maps.google.com/maps?q=njsmti&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co"></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://embedgooglemap.2yu.co/"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+            </div>
+
+        </div>
+        <center>  <h3 style="color:black;font-family:algerian">immediately Contact us</h3></center>
+        <div class="dvv" style="">
+            <div class="dvv1">
+                <center>
+                    <img style="" class="im1"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_khiPiUneTyXsBFTV7e4xsZTmNc-oyqz4Kg&usqp=CAU" alt="">
+                </center>
+                    <center>
+                        <h3 style="color:#0818AB;font-family:algerian">DROP a message</h3>
+                    </center>
+                    <div style="display: flex; align-items: flex-start;">
+                        <div style=" " class="dv3">
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" placeholder="Your Name" name="name" style="border-radius: 20px; width: 260px; height: 40px;"required>
+                            <span class="text-danger">
+                                <br><br>
+                            <input type="email" placeholder="Your Email" name="email" style="border-radius: 20px; width: 260px; height: 40px;" required>
+                            <span class="text-danger">
+                                 <br><br>
+                            <input type="digit" placeholder="Your Phone Number" name="ph" style="border-radius: 20px; width: 260px; height: 40px;" required>
+                            <span class="text-danger">
+                                <br><br>
+                            <input type="submit" name="send" value="Send Message" style="border-radius: 20px; width: 200px; height: 40px; background: red; color: white;">
+                            <br><br>{% if SM %}<h3>{{ SM }}</h3>{% endif %}
+                        </div>
+
+                        <div style="margin-left: 60px;">
+                            <input type="textfield" placeholder="Your Message" name="msg" style="height: 170px; width: 300px; border-radius: 20px;">
+                            <span class="text-danger">
+                        
+                        </div>
+                      
+                      </form>
+                    </div>
+                </div>
+             </div>
+        </div><br>
+        <center>  <h3 style="color:black;font-family:algerian">frequently asked questions</h3></center>
+        <div style="border:5px solid #000080;border-radius:20px;margin-left: 150px;margin-right:150px;">
+        <br>
+        <div class="faq">
+  <details onclick="collapseOthers(this)"><br>
+    <summary>Which Facility available in it?</summary>
+    <p>NJSMTI provides huge canpus area surrounding the green environment and entire Institute cover by CCTV with voice for 24/7 hour.</p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>How Can I Apply online in NJSMTI?</summary>
+    <p>If you are stydent then apply by your self from the student portal through the apply online option.
+      if You want apply as professor then it will available in circular at our main page if we require the assistant professor.
+    </p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>Which Courses Available in it?</summary>
+    <p>Here, MCA, MBA and currantly we add new course which is Integreated MCA.</p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>You Arrange placement cell?</summary>
+    <p>Yes, In Each year our Institute arrange the placement cell and many student will get high-payment job.</p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>Do you arrange vehical for long distance students?</summary>
+    <p>Absolutely! we provide the service for long distance student by bus or echo.</p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>How Can i Contact to your website Developer?</summary>
+    <p>You can contact to developer by the instagram which is available in footer.it developed by SELJA CHAUHAN</p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>What is your Aim?</summary>
+    <p>We ready to student for them future for it we develop self study to them.and arrange special lecture on it.and want to see our student make us as well as them parents to proud.</p>
+  </details>
+</div>
+
+<div class="faq">
+  <details onclick="collapseOthers(this)">
+    <summary>can you Arrange other activity?</summary>
+    <p>yes,we arrange other activities in our Institute like, sports day,days celebration,all festivals and more.</p>
+  </details>
+</div>
+                </div>
+    </div>
+    <br><br>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+
+  <script>
+function Speech() {
+    if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            // Create a new instance of the SpeechSynthesisUtterance object
+            var message = new SpeechSynthesisUtterance();
+
+            // Set the text to be spoken
+            message.text = "contact us";
+
+            // Set the voice to be used (optional)
+            var voices = window.speechSynthesis.getVoices();
+
+            // Find a male voice
+            var maleVoice = voices.find(function(voice) {
+                return voice.name.includes('Female');
+            });
+
+            // Set the male voice (if found), otherwise use the first available voice
+            message.voice = maleVoice || voices[0];
+
+            // Set other options (optional)
+            message.volume = 1; // Range from 0 to 1
+            message.rate = 1; // Range from 0.1 to 10
+            message.pitch = 1; // Range from 0 to 2
+
+            // Speak the text
+            window.speechSynthesis.speak(message);
+        };
+    } else {
+        console.log('Speech synthesis not supported');
+    }
+}
+
+// Call Speech function when the page loads
+Speech();
+</script>
+</html>
+
+{% include 'footer.html' %}

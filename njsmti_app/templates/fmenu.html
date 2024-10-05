@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <style>
+            
+            .div {
+                display: flex;
+                align-items: center;
+            }
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                font-family: Perpetua;
+                margin-left: 30px;
+                background: linear-gradient(to left, white, #89CFF0);
+            }
+
+            nav ul li {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            li a {
+                color: #000080;
+                font-weight: 800;
+                font-size: 18px;
+                font-family: Perpetua;
+            }
+
+            li a:hover {
+                color: #FFA700;
+                font-weight: 800;
+                font-size: 18px;
+                font-family: Perpetua;
+                text-decoration: none;
+            }
+
+            li a:active {
+                color: green;
+            }
+        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      </head>
+      <body>
+    
+        {% if not request.session.email or not request.session.role or request.session.role != "Faculty" %}
+            <script>
+                window.location.href = "{% url 'login' %}";
+            </script>
+        {% endif %}
+    
+        <div><div class="div">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" style="margin-left: 8%; width: 150px; height: 150px;" alt="">
+        <div>
+            <h2>The Veraval Education Society Sanchalit</h2>
+            <h3>NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
+            <h4>At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujrat)</h4>
+        </div>
+        </div>
+                <div class="dvg">
+                    <center>
+                        <nav>
+                            <ul>
+                                <li><a href="{% url 'diary' %}">DIARY</a></li>
+                                <li><a href="{% url 'diarydata' %}"> SHOW_DIARY</a></li>
+                                <li><a href="{% url 'syllabus' %}">SYLLABUS</a></li>
+                                <li><a href="{% url 'studentdata' %}">STUDENT_DATA</a></li>
+                                <li><a href="{% url 'material' %}">UPLOAD_MATERIAL</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <li><a href = "{% url 'flogout' %}" style="background: red; color: white; ">LOGOUT</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </center>
+                </div>
+           
+    </body>
+</html>

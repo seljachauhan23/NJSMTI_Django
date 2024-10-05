@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Edit Student's Data</title>
+    <style>
+        .div {
+     display: flex;
+    align-items: center;
+      }
+
+        .div img {
+        margin-right: 20px;
+        margin-left: 20%;
+        }
+
+
+        .img {
+        width: 100px;
+        height: 150px;
+        margin-left: 50px;
+        }
+      
+        .h1{
+        color: black;
+        text-shadow: 2px 2px 4px rgba(100, 10,10 , 1000);
+        text-align: center;
+        padding-top: 15px;
+        font-family: algerian;
+        }
+        h2{
+        padding-left: 20%;
+        color: blue;
+        font-family: Cambria; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        font-weight:bolder;
+        }
+       h3{
+        font-familt: Perpetua;
+        color: red;
+        font-size:20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        }
+        h4{
+        padding-left: 20%;
+        color: blue;
+        font-family: Cambria; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+        font-weight:bolder;
+        }
+       p{
+        text-align: center;
+        padding-bottom: 3%;
+        font-size: 30px;
+        font-family:algerian;
+        color:#000080;
+       
+        margin-right:100px;
+        
+        
+        }
+
+        form{
+        margin-left:10%;
+        }
+        .input{
+                border-radius: 20px; 
+                width: 40%; 
+                height: 40px;
+                margin-left:25%;
+        }
+        .dvv {
+    background: linear-gradient(to left, #89CFF0, #0096FF);
+    height: 1400px;
+    width: 85%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.dvv1 {
+    background: white;
+    height: 1350px;
+    width: 75%;
+    padding-right: 10px;
+    border-radius: 20px;
+    border: 3px solid #000080;
+
+}
+.btn1 {
+    margin-left: 30%;
+    border-radius: 20px;
+    width: 260px;
+    height: 60px;
+    background: #000080;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid yellow;
+}
+
+.btn1:hover {
+    margin-left: 30%;
+    border-radius: 20px;
+    width: 260px;
+    height: 60px;
+    background: white;
+    color: #000080;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid #000080;
+}
+span{
+        font-weight: bold;
+}
+
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+ {% if not request.session.email or not request.session.role or request.session.role != "Director" and request.session.role != "Faculty" %}
+    <script>
+        window.location.href = "{% url 'login' %}";
+    </script>
+{% endif %}
+</script>
+
+@endif
+    <div>
+    <div class="div">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" style="margin-left: 8%; width: 150px; height: 150px;" alt="">
+    <div>
+        <h2>The Veraval Education Society Sanchalit</h2>
+        <h3>NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
+        <h4>At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujrat)</h4>
+    </div>
+    </div>
+     <div class="h1">Update Student's Record</div>
+    <div class="dvv">
+        <div class="dvv1">
+        <center>
+            <img style="height:100px;width:100px;padding-top:10px;"src="data:image/jpeg;base64,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" alt="">
+        </center>
+       <form action="{% url 'sedit' student.email %}" method="post">
+    {% csrf_token %}
+    
+    <p style="padding-top:10px;">Personal Details</p>
+    
+    <input type="text" name="name" class="input" placeholder="Update Student Name" value="{{ student.name }}" readonly><br><br>
+
+    <input type="text" name="adr" class="input" placeholder="Update Student Address" value="{{ student.address }}"><br><br>
+
+    <input type="text" value="{{ student.stud_mob }}" class="input" name="sph" placeholder="Update Student Phone Number"><br><br>
+
+    <input type="text" value="{{ student.parents_mob }}" class="input" name="pph" placeholder="Update Student Parents Phone Number"><br><br>
+
+    <input type="email" class="input" name="email" placeholder="Update Student Email" value="{{ student.email }}" readonly><br><br>
+
+    <input type="date" name="dob" class="input" placeholder="Enter Faculty Date Of Birth" value="{{ student.dob|date:'Y-m-d' }}" readonly>
+
+    <input type="text" value="{{ student.birth_place }}" class="input" name="bp" placeholder="Update Student Birth Place"><br><br>
+
+    <select name="category" class="input" required>
+        <option value="{{student.category}}"  selected>{{student.category}}</option>
+       
+    </select><br><br>
+
+    <label style="margin-left:25%;font-size: 20px;font-weight: bold;">Gender :</label>
+    <label style="margin-left:25%;font-size: 20px;font-weight: bold;">Gender :</label>
+        {% if student.gender == "Male" %}
+        <input type="radio" name="gender" value="Male" checked><label style="font-size: 20px;font-weight: bold;">Male</label>
+        {% elif student.gender == "Female" %}
+        <input type="radio" name="gender" value="Female" checked><label style="font-size: 20px;font-weight: bold;">Female</label>
+        {% else %}
+        <input type="radio" name="gender" value="Other" checked><label style="font-size: 20px;font-weight: bold;">Other</label>
+        {% endif %}
+        <br><br>
+
+    <input type="text" name="nationality" placeholder="Update Student Nationality" class="input" value="{{ student.nationality }}"><br><br>
+
+    <p style="padding-top:10px;">Education Qualification</p>
+    
+    <input type="text" class="input" name="course" placeholder="Update Student Graduation Course" value="{{ student.course }}"><br><br>
+
+    <input type="text" name="clg" class="input" placeholder="Update Student Graduation College" value="{{ student.college }}"><br><br>
+
+    <input type="number" value="{{ student.cgpa }}" name="cgpa" class="input" placeholder="Update Student CGPA"><br><br>
+
+    <input type="text" class="input" name="class_name" placeholder="Update Student Current Course" value="{{ student.class_name }}"><br><br>
+
+    <input type="text" class="input" name="semester" placeholder="Update Your Course For Apply" value="{{ student.semester }}"><br><br>
+
+    <input type="password" name="pwd" placeholder="Enter Student Password" class="input" value="{{ student.password }}"><br><br>
+
+    <input type="submit" name="submit" value="submit" class="btn1">
+</form>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  <script>
+function Speech() {
+    if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            // Create a new instance of the SpeechSynthesisUtterance object
+            var message = new SpeechSynthesisUtterance();
+
+            // Set the text to be spoken
+            message.text = "edit data of student";
+
+            // Set the voice to be used (optional)
+            var voices = window.speechSynthesis.getVoices();
+
+            // Find a male voice
+            var maleVoice = voices.find(function(voice) {
+                return voice.name.includes('Female');
+            });
+
+            // Set the male voice (if found), otherwise use the first available voice
+            message.voice = maleVoice || voices[0];
+
+            // Set other options (optional)
+            message.volume = 1; // Range from 0 to 1
+            message.rate = 1; // Range from 0.1 to 10
+            message.pitch = 1; // Range from 0 to 2
+
+            // Speak the text
+            window.speechSynthesis.speak(message);
+        };
+    } else {
+        console.log('Speech synthesis not supported');
+    }
+}
+
+// Call Speech function when the page loads
+Speech();
+</script>
+</html>

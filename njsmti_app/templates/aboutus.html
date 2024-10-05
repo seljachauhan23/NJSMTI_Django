@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+     <title>About Us</title>
+    {% include 'header.html' %}
+    <style>
+      
+        .dv{
+            background:url('{% static 'ab.jpeg' %}');
+            height:200px;
+            width:100%;
+        }
+
+        .btn2{
+          background:#000080;
+          color:white;
+          text-align:center;
+           width:24%; 
+          height:60px;
+          border: 3px solid #0492C2;
+          display:inline-block;
+          
+          
+        }
+
+        .btn2:hover{
+          color:white;
+          background:black;
+          border: 3px solid yellow;
+          border-redious:20px;
+          transform:scale(1);
+          border-radius:20px;
+
+        }
+        .btn1{
+            color:white;
+          text-align:center;
+          width:32%;
+          height:60px;
+          display:inline-block;
+          background:green;
+          border:3px solid yellow;
+        }
+        .btn1:hover{
+            background:white; 
+           border:3px solid green;
+           color:green;
+           transform:scale(1.05);
+          border-radius:20px;
+        }
+        .btn3{
+            color:white;
+          text-align:center;
+          width:32%;
+          height:60px;
+          display:inline-block;
+          background:blue;
+          border:3px solid yellow;
+        }
+        .btn3:hover{
+            background:white; 
+           border:3px solid blue;
+           color:blue;
+           transform:scale(1.05);
+          border-radius:20px;
+        }
+        .btn4{
+            color:white;
+          text-align:center;
+          width:32%;
+          height:60px;
+          display:inline-block;
+          background:black;
+          border:3px solid yellow;
+        }
+        .btn4:hover{
+            background:white; 
+           border:3px solid black;
+           color:black;
+           transform:scale(1.05);
+          border-radius:20px;
+        }
+
+        .image {
+        display: inline-block;
+        width: 20%;
+        vertical-align: top;
+    } 
+    .h{
+      color:#000080;
+      font-family:Algerian;
+      margin-left:200px;
+      padding:20px;
+    }
+    .h1{
+      padding:50px;
+      font-family:Algerian;
+      color:white
+    }
+    .dv1{
+      display:inline-block;
+      width:50%;
+      margin-left:80px;
+    }
+    .dv2{
+      margin-left:60px;
+    }
+        </style>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div>
+        <div class="dv">
+       <center> <h1 style="" class="h1" >ABOUT US</h1></center>
+        </div>
+        <div style="display:inline-block;">
+            <div style=" " class="dv1">
+            <h1 style="" class="h">N.J.S.M.T.I</h1>
+            <p style="color:#000080;font-family: serif;font-size: 20px;text-align: justify;
+        text-justify: inter-word;">
+        The board trustees have established one state of art institute for management and technical education named NARANDAS JETHALAL SONECHA MANAGEMENT & 
+                TECHNICAL INSTITUTE at Chanduvav village 8 Kms away from Veraval on National Highway 8-D. N.J.Sonecha Management & Technical Institute was started by 
+                the Veraval Education Society on 8.8.2011 with the help of sponsored donation scheme of share and care foundation sponsored by Shri Jayendrabhai & Kashmiraben. 
+                We all trustees express our sincere thanks to Share & Care Foundation and Sonecha Family.</p>
+                <a href=" {% url 'efc' %}"><button class="btn1" style=""><b>ECHO-FRIENDLY CAMPUS</b></button><a>
+                <a href=" https://docs.google.com/forms/d/e/1FAIpQLScidMMG_dt8Lx64AFhyl6oOyTVsr0_0Z8-YEtMxnRcHu1ToPQ/viewform"><button class="btn3" style=""><b>GRIEVANCE FORM</b></button></a>
+                <a href=" {% url 'gb' %}"><button class="btn4" style=""><b>GOVERNING BODY</b></button><a>
+            </div>
+            <div class="image">
+                <img src="https://www.veravaleducationsociety.org/njsmti/img/about/about.png" alt="">
+        </div>
+
+        <div style="" class="dv2">
+<a href=" https://www.veravaleducationsociety.org/njsmti/annoucement/mdlatest.pdf"><button class="btn2" style="width:24%"><b>MANDATORY DISCLOSURE</b></button>
+<a href="https://www.veravaleducationsociety.org/njsmti/aicteapprove.html "><button class="btn2"><b>AICTE APPROVALS</b></button>
+<a href="https://www.veravaleducationsociety.org/njsmti/grivance%20form.html "><button class="btn2"><b>GRIEVANCE COMMITTE</b></button>
+<a href="  https://www.youtube.com/watch?v=ZVSzZyn79y8"><button class="btn2"><b>COLLEGE VIDEO</b></button><br><br>
+<a href=" https://www.youtube.com/watch?v=RmsvIfwXw7A"><button class="btn2"><b>JOB FAIR 2022 VIDEO</b></button>
+<a href=" https://www.youtube.com/watch?v=MyIU3y_kA80"><button class="btn2"><b>INDUSTRIAL VISIT & TOUR VIDEO</b></button><br>
+      </div><br>
+        
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  <script>
+function Speech() {
+    if ('speechSynthesis' in window) {
+        // Wait for voices to be loaded
+        window.speechSynthesis.onvoiceschanged = function() {
+            // Create a new instance of the SpeechSynthesisUtterance object
+            var message = new SpeechSynthesisUtterance();
+
+            // Set the text to be spoken
+            message.text = "About us";
+
+            // Set the voice to be used (optional)
+            var voices = window.speechSynthesis.getVoices();
+
+            // Find a male voice
+            var maleVoice = voices.find(function(voice) {
+                return voice.name.includes('Female');
+            });
+
+            // Set the male voice (if found), otherwise use the first available voice
+            message.voice = maleVoice || voices[0];
+
+            // Set other options (optional)
+            message.volume = 1; // Range from 0 to 1
+            message.rate = 1; // Range from 0.1 to 10
+            message.pitch = 1; // Range from 0 to 2
+
+            // Speak the text
+            window.speechSynthesis.speak(message);
+        };
+    } else {
+        console.log('Speech synthesis not supported');
+    }
+}
+
+// Call Speech function when the page loads
+Speech();
+</script>
+</html>
+
+{% include 'footer.html' %}
