@@ -122,26 +122,14 @@ table {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-
-  <div>
-          
-                <div class="div">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU8WWBR8KWYgBMJ2uiEIFKl1vPgP82UHujWFwSMOQahA&s" style="" id="logo" alt="">
-    <div>
-        <h2 class="h22">The Veraval Education Society Sanchalit</h2>
-        <h3 class="h33">NARANDAS JETHALAL SONECHA MANAGEMENT & TECHNICAL INSTITUTE</h3>
-        <h4 class="hh4">At. Chanduvav, Tal, Veraval, Dist. Gir Somnath (Gujrat)</h4>
-    </div><br>
-              
-              <br><br>
-              
+    {% if request.session.role == 'Faculty' %}
+    {% include 'fmenu.html' %}
+    {% else %}
+    {% include 'smenu.html' %}
+    {% endif %}
         </div><br><br>
         <div class="h1">Syllabus Desk</div><br><br>
-        
-
 <body>
-
-
 
 <table style="width:80%;margin-left:150px;">
   <tr>
